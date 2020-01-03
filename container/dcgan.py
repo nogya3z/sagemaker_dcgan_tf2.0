@@ -17,7 +17,9 @@ from read_tfrecords import read
 from tensorflow.keras import layers
 
 BATCH_SIZE = 256
-
+#horovod resources:
+#https://github.com/horovod/horovod/blob/master/examples/tensorflow2_mnist.py
+#https://github.com/horovod/horovod/blob/master/examples/keras_imagenet_resnet50.py#L166
 hvd.init()
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
